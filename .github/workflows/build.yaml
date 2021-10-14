@@ -74,11 +74,9 @@ jobs:
         run: |
           cd k8s-manifest-repo
           git config --global user.email "github-actions@github.com"
-          echo "step 1 pass"
           git config --global user.name "github-actions"
-          echo "step 2 pass"
+          echo "git config's result is"
+          git config --list
           git commit -am "Update image tag"
-          echo "step 3 pass"
           git push -u origin main
-          echo "step 4 pass"
 
