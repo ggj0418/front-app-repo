@@ -74,7 +74,7 @@ jobs:
       - name: Commit files
         run: |
           cd k8s-manifest-repo
-          git config --unset credential.helper
+          git config --global --unset credential.helper
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
           git commit -am "Update image tag"
